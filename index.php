@@ -1,5 +1,5 @@
 <?php
 
-include_once("natour.html");
+include_once("_app.js");
 
 ?>

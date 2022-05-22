@@ -6,6 +6,39 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.products-container {
+  width: 100%;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding: 10px;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  transition: all 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.card-description {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 a {
   color: inherit;
   text-decoration: none;

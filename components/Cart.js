@@ -5,10 +5,7 @@ import Header from "./Header";
 import { CartContext } from "../context/CartContext";
 
 const Cart = (props) => {
-  const {visible}=useContext(CartContext);
-
-  const { cartItems, onAdd, onRemove,itemsPrice,taxPrice,shippingPrice,totalPrice } = props;
-
+  const {visible, cartItems, onAdd, onRemove,itemsPrice,taxPrice,shippingPrice,totalPrice}=useContext(CartContext);
 
 
   if(!visible) return null;
@@ -30,7 +27,7 @@ const Cart = (props) => {
           </div>
 
           <div>
-            {item.qty} x Rs.{item.price.toFixed(2)}
+            {item.qty} x Rs.{item.price}
           </div>
         </div>
       ))}

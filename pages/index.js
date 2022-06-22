@@ -16,6 +16,7 @@ const BASE_URL = "https://fakestoreapi.com";
 const Products = (props) => {
   const router = useRouter();
   const { onAdd,onRemove,cartItems,cartlength } = useContext(CartContext);
+  console.log(onAdd,onRemove);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
 
@@ -45,7 +46,7 @@ const Products = (props) => {
 
   return (
     <div>
-    
+     
         <div>
         <Header countCartItems={cartlength} />
           <Cart
@@ -54,6 +55,7 @@ const Products = (props) => {
             onRemove={onRemove}
           />
       </div>
+      
    
 
       <div className="products-container">

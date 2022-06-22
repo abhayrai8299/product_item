@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <AppBar position="static">
       <Grid
-        justify="space-between" // Add it here :)
+        justify="space-between"
         container
         spacing={10}
       >

@@ -33,6 +33,9 @@ export const CartProvider = ({ children }) => {
       );
     }
   };
+  const RemoveToCart=(product)=>{
+    setCartItems(cartItems.filter((x) => x.id !== product.id))
+  }
   const cartlength=cartItems.length;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const taxPrice = itemsPrice * 0.14;
@@ -41,7 +44,7 @@ export const CartProvider = ({ children }) => {
   const [visible, setVisible] = useState(false);
   return (
     <CartContext.Provider
-      value={{ visible, setVisible, onAdd, onRemove, cartItems,cartlength,itemsPrice,taxPrice,shippingPrice,totalPrice }}
+      value={{ visible, setVisible, onAdd, onRemove, cartItems,cartlength,itemsPrice,taxPrice,shippingPrice,totalPrice,RemoveToCart }}
     >
       {children}
     </CartContext.Provider>

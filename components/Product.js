@@ -20,14 +20,14 @@ const Products = () => {
           method: "GET",
           url: `${BASE_URL}/products`,
         });
-        setData(response.data);
+        setData(response.body);
       } catch (error) {
         console.log(error);
       } finally {
         setLoading(false);
       }
     })();
-  }, []);
+  },[]);
 
   function showDetailsHandler(productId) {
     router.push(`/product/${productId}`);
